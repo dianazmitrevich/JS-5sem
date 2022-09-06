@@ -60,9 +60,6 @@ let iSix = 2;
 let aSix = ++iSix; // 3
 let bSix = iSix++; // 2
 
-/* при использовании префиксной формы сначала
-происходит изменение переменной, а потом возврат */
-
 // 7
 const task7 = () => {
    console.log("7-1", "Привет" > "привет" ? true : false);
@@ -100,7 +97,18 @@ const task10 = () => {
 
 // 11
 const task11 = () => {
-   let examsArray = ['F', 'F', 'F'];
+   let MathExam = false;
+   let EnglishExam = false;
+   let RussianExam = false;
+
+   if (MathExam && EnglishExam && RussianExam)
+      console.log("Вы сдали сессию!");
+   else if (!MathExam && !EnglishExam && !RussianExam)
+      console.log("Увы, вас скоро отчислят");
+   else
+      console.log("Вас ожидает пересдача");
+
+   /*let examsArray = ['F', 'F', 'F'];
    let examsResult = examsArray.join('');
 
    if (!examsResult.includes('T'))
@@ -108,8 +116,9 @@ const task11 = () => {
    else if (!examsResult.includes('F'))
       console.log("Вы сдали сессию!");
    else
-      console.log("Вас ожидает пересдача");
+      console.log("Вас ожидает пересдача");*/
 }
+task11();
 
 // 12
 const task12 = () => {
