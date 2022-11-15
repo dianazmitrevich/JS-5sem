@@ -5,21 +5,18 @@ function shoe(id, size, color, price) {
    this.size = size;
    this.color = color;
    this.price = price;
+   this.sale = 0;
+   this.finalPrice = this.price;
 
-   Object.defineProperty(this, "sale", {
-      set(value) {
-         Object.defineProperty(this, "finalPrice", {
-            get() {
-               return this.price - (this.price * value / 100);
-            },
-
-            set() {
-               return this.price;
-            }
-         });
+   Object.defineProperty(this, "finalPrice", {
+      get() {
+         return this.price - (this.price * this.sale / 100);
+      },
+      set() {
+         return this.finalPrice;
       }
    });
-}
+};
 
 const products = {
    shoes: {
