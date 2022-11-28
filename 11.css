@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu';
+}
+
+.app {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 60px 0;
+}
+
+.card {
+    position: relative;
+    width: 182px;
+    height: 230px;
+    margin-bottom: 40px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card:nth-child(4n) {
+    margin-right: 0;
+}
+
+.card__image {
+    width: 135px;
+    margin-top: -40px;
+    margin-bottom: 14px;
+}
+
+.card__name {
+    width: 128px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 4px;
+}
+
+.card__price {
+    width: 128px;
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+
+.card__button {
+    width: 121px;
+    height: 26px;
+    padding: 6px 50px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    border: none;
+}
