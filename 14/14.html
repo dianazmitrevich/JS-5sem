@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+
+    <link rel="stylesheet" href="14.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dws-wrapper">
+        <div class="dws-form">
+            <input type="radio" id="tab-1" name="tabs" checked>
+            <label class="tab" for="tab-1" title="Вкладка 1">Авторизация</label>
+
+            <input type="radio" name="tabs" id="tab-2">
+            <label class="tab" for="tab-2" title="Вкладка 2">Регистрация</label>
+
+            <form id="form-1" class="tab-form">
+                <div class="box-input">
+                    <input class="input" type="text" required>
+                    <label>Введите E-mail</label>
+                </div>
+
+                <div class="box-input">
+                    <input class="input" type="password" required>
+                    <label>Введите пароль</label>
+                </div>
+
+                <a href="#" class="button">Войти</a>
+                <ul class="social">
+                    <li>
+                        <a href="#">
+                            <div><i class="fa fa-facebook"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div><i class="fa fa-twitter"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div><i class="fa fa-instagram"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div><i class="fa fa-vk"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div><i class="fa fa-youtube"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#">Я забыл свой E-mail или пароль</a>
+            </form>
+
+            <form id="form-2" class="tab-form">
+                <input class="input field" type="text" placeholder="Введите фамилию" id="firstname">
+                <input class="input field" type="text" placeholder="Введите имя" id="lastname">
+                <input class="input field" type="text" placeholder="Введите дату рождения" id="birth">
+                <input class="input field" type="text" placeholder="Введите E-mail" id="email">
+                <input class="input field" type="password" placeholder="Введите пароль" id="password">
+                <a class="button"><input type="submit" value="">Регистрация</input></a>
+
+                <div class="recover">
+                    <input type="checkbox" id="ckbox">
+                    <label for="ckbox">Ознакомлен(-а) и принимаю <a href="#">условия регистрации</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="14.js"></script>
+</body>
+
+</html>
