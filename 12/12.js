@@ -18,7 +18,7 @@ app.appendChild(ballElement);
 
 let ball = document.getElementById("ball");
 
-ball.onmousedown = function(e) {
+ball.onmousedown = function (e) {
 
     let coordinateX = 0;
     let coordinateY = 0;
@@ -47,7 +47,7 @@ ball.onmousedown = function(e) {
         let y = 0;
         let t = 0;
 
-        let step = setInterval( () => {
+        let step = setInterval(() => {
             y = coordinateY - speed * Math.cos(alpha) * t;
             x = coordinateX - (speed * Math.sin(alpha) * t - (g * t ** 2) / 2);
             t += 0.1;
@@ -55,19 +55,19 @@ ball.onmousedown = function(e) {
             ball.style.left = x + "px";
             ball.style.top = y + "px";
 
-            if ((x + ball.offsetWidth) > 1920){
+            if ((x + ball.offsetWidth) > 1920) {
                 clearInterval(step);
             }
-            if ((y + ball.offsetHeight) < 130){
+            if ((y + ball.offsetHeight) < 130) {
                 clearInterval(step);
             }
 
         }, 10);
     }
 
-    ball.ondragstart = function() {
+    ball.ondragstart = function () {
         return false;
-    };
+    }
 
     move(e);
 
@@ -83,12 +83,11 @@ ball.onmousedown = function(e) {
         }
     }
 
-    ball.onmousemove = function(e) {
+    ball.onmousemove = function (e) {
         move(e);
     }
 
-    ball.onmouseup = function() {
+    ball.onmouseup = function () {
         animate();
     }
-
 }

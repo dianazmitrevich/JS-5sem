@@ -30,10 +30,10 @@ function startRotate(e) {
     let cardInner = this.querySelector(".card-inner");
     let halfHeight = cardInner.offsetHeight / 2;
     let halfWidth = cardInner.offsetWidth / 2;
-    cardInner.style.transform = 'rotateX('+ (e.offsetY - halfHeight)/20 +'deg) rotateY('+ -(e.offsetX - halfWidth)/15 +'deg)';
+    cardInner.style.transform = 'rotateX(' + (e.offsetY - halfHeight) / 20 + 'deg) rotateY(' + -(e.offsetX - halfWidth) / 15 + 'deg)';
 }
 
-function stopRotate(e){
+function stopRotate(e) {
     let cardInner = this.querySelector(".card-inner");
     cardInner.style.transform = "rotate(0)";
 }
@@ -61,14 +61,14 @@ const radius = circle.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
 const input = document.querySelector(".percent");
 
-input.addEventListener("change", function() {
+input.addEventListener("change", function () {
     setProgress(input.value);
 });
 
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = circumference;
 
-function setProgress(percent){
+function setProgress(percent) {
     let offset = circumference - (percent / 100 * circumference) % circumference;
     circle.style.strokeDashoffset = offset;
 }
@@ -86,7 +86,7 @@ for (let i = 1; i <= 3; i++) {
     parallaxSection.appendChild(layer);
 }
 
-function parallax(e){
+function parallax(e) {
     this.querySelectorAll(".layer").forEach(layer => {
         let speed = layer.getAttribute("data-speed");
         layer.style.transform = `translateX(${e.clientX * speed / 1000}px)`
