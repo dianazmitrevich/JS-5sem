@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    color: #262626;
+}
+
+.text {
+    text-align: center;
+    margin: 60px 0 80px;
+}
+
+.text__heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.text__subheading {
+    font-size: 16px;
+}
+
+.text__heading span,
+.text__subheading span {
+    color: #ff0036;
+}
+
+.slider {
+    width: 1310px;
+    margin: 0 auto;
+    height: 450px;
+    overflow-y: hidden;
+}
+
+.slide {
+    width: 300px !important;
+    margin-right: 30px;
+    overflow-x: hidden;
+    cursor: pointer;
+    border: 1px solid #d8d8d8;
+    transition: border .3s ease-in-out;
+}
+
+.slide:hover {
+    border-color: #000;
+}
+
+.slide:hover .slide__name {
+    color: #ff0036;
+}
+
+.slide .row:nth-of-type(1) {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.slide .row:nth-of-type(1) img {
+    width: 100%;
+}
+
+.slide .row:nth-of-type(1):hover .slide__socials {
+    opacity: 1;
+}
+
+.slide__socials {
+    opacity: 0;
+    background: #262626;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease-in-out;
+}
+
+.slide__socials a {
+    margin-right: 10px;
+}
+
+.slide__socials:last-child {
+    margin: 0;
+}
+
+.slide .row:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.slide__name {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transition: color .3s ease-in-out;
+}
+
+.slide__job {
+    font-size: 16px;
+}
+
+.range {
+    width: 100%;
+    text-align: center;
+}
+
+input[type=range] {
+    width: 300px;
+    height: 1px;
+    background: #262626;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: #262626;
+    clip-path: polygon(25% 10%, 75% 10%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+}

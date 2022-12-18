@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+
+    <link href="https://fonts.cdnfonts.com/css/raleway-5" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link rel="stylesheet" href="15.css">
+</head>
+
+<body>
+    <div class="text">
+        <div class="text__heading">our <span>teamwork</span></div>
+        <div class="text__subheading">Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit</span>. Integer sed
+            magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</div>
+    </div>
+
+    <div class="slider">
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-1.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">Bruce Wayne</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-2.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">Amr Srour</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-3.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">SARAH DOE</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-1.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">Bruce Wayne</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-2.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">Amr Srour</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="row">
+                <img src="../images/15-3.png" alt="15">
+                <div class="slide__socials">
+                    <a href="#"><img src="../images/15-4.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-5.png" alt="15" class="slide__social"></a>
+                    <a href="#"><img src="../images/15-6.png" alt="15" class="slide__social"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slide__name">SARAH DOE</div>
+                <div class="slide__job">Webdesigner</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="range">
+        <input type="range" id="range" min="1" value="1" step="1">
+    </div>
+
+    <script>
+        $(".slider").on("init", function (event, slick) {
+            let amount = slick.slideCount;
+            $("#range").attr("max", amount);
+        });
+
+        $(".slider").on("afterChange", function (e, slick, currentSlide) {
+            $("#range").val(currentSlide + 1);
+        });
+
+        $("#range").on("change", function () {
+            $(".slider").slick("slickGoTo", this.value - 1);
+        });
+
+        $(".slider").slick({
+            infinite: true,
+            slidesToShow: 4,
+            arrows: false,
+            dots: false,
+        });
+    </script>
+
+</body>
+
+</html>
